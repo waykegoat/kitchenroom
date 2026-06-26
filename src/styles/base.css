@@ -1,0 +1,65 @@
+@import './design-tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .export-document,
+  .export-document * {
+    visibility: visible;
+  }
+
+  .export-document {
+    display: block !important;
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 24px;
+    background: #ffffff;
+  }
+}
