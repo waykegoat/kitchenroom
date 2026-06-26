@@ -24,7 +24,7 @@ const routes: RouteRecordRaw[] = [
 ]
 
 export const appRouter = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/kitchenroom/'),
   routes,
   scrollBehavior() {
     return { top: 0 }
